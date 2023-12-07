@@ -1,0 +1,69 @@
+﻿<Window x:Class="Météo_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Météo_2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.7*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <TextBlock Grid.Column="0" Style="{StaticResource StyleJours}" Name="TB_Jour" Text="Lundi" Margin="0,170,350,0"/>
+
+            <TextBlock Grid.Column="0" Style="{StaticResource StylePrevision}" Name="TB_vent" Text="Partially Cloudy" Margin="200,0,0,125"/>
+            <TextBlock Grid.Column="0" Style="{StaticResource StylePrevision}" Name="TB_humidite" Text="Precipitation: 25%" Margin="200,0,0,75"/>
+            <TextBlock Grid.Column="0" Style="{StaticResource StylePrevision}" Name="TB_clouds" Text="Nuageux" Margin="200,0,0,26"/>
+            <Image Grid.Column="0" Style="{StaticResource StyleImage}" Name="IMG_Icone"/>
+
+            <TextBlock Grid.Column="0" Style="{StaticResource StylePrevision}" Name="TB_Temp_actuelle" Text="Temp actuel" Foreground="Black" Margin="200,26,0,0"/>
+            <TextBlock Grid.Column="0" Style="{StaticResource StylePrevision}" Name="TB_Temp_minimum" Text="Temp min" Foreground="Black" Margin="200,75,0,0"/>
+            <TextBlock Grid.Column="0" Style="{StaticResource StylePrevision}" Name="TB_Temp_maximum"  Text="Temp max" Foreground="Black" Margin="200,125,0,0"/>
+
+
+            <ComboBox Grid.Column="1" x:Name="CB_Ville" Text="Annecy" HorizontalAlignment="Center" Margin="0,15,0,0" VerticalAlignment="Top" MinWidth="200" Height="25" SelectionChanged="CB_Ville_SelectionChanged"/>
+            <TextBox Grid.Column="1" x:Name="TB_Ville_ADD" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" MinWidth="200" Height="25"/>
+            <Button Grid.Column="1" x:Name="BTN_Ville_ADD" Content="Ajouter" HorizontalAlignment="Center" Margin="0,80,0,0" VerticalAlignment="Top" MinWidth="200" Height="25" Click="BTN_Ville_ADD_Click"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" Style="{StaticResource StyleJours_2}" Name="TB_Jour_1" Text="Lundi"/>
+            <TextBlock Grid.Column="0" Style="{StaticResource StylePrevision_1}" Name="TB_Temp_minimum_1" Text="Temp min" Foreground="Black"/>
+            <TextBlock Grid.Column="0" Style="{StaticResource StylePrevision_2}" Name="TB_Temp_maximum_1"  Text="Temp max" Foreground="Black"/>
+            <Image Grid.Column="0" Style="{StaticResource StyleImage_1}" Name="IMG_Icone_1"/>
+
+            <TextBlock Grid.Column="1" Style="{StaticResource StyleJours_2}" Name="TB_Jour_2" Text="Mardi"/>
+            <TextBlock Grid.Column="1" Style="{StaticResource StylePrevision_1}" Name="TB_Temp_minimum_2" Text="Temp min" Foreground="Black"/>
+            <TextBlock Grid.Column="1" Style="{StaticResource StylePrevision_2}" Name="TB_Temp_maximum_2"  Text="Temp max" Foreground="Black"/>
+            <Image Grid.Column="1" Style="{StaticResource StyleImage_1}" Name="IMG_Icone_2"/>
+
+            <TextBlock Grid.Column="2" Style="{StaticResource StyleJours_2}" Name="TB_Jour_3" Text="Mercredi"/>
+            <TextBlock Grid.Column="2" Style="{StaticResource StylePrevision_1}" Name="TB_Temp_minimum_3" Text="Temp min" Foreground="Black"/>
+            <TextBlock Grid.Column="2" Style="{StaticResource StylePrevision_2}" Name="TB_Temp_maximum_3"  Text="Temp max" Foreground="Black"/>
+            <Image Grid.Column="2" Style="{StaticResource StyleImage_1}" Name="IMG_Icone_3"/>
+
+            <TextBlock Grid.Column="3" Style="{StaticResource StyleJours_2}" Name="TB_Jour_4" Text="Jeudi"/>
+            <TextBlock Grid.Column="3" Style="{StaticResource StylePrevision_1}" Name="TB_Temp_minimum_4" Text="Temp min" Foreground="Black"/>
+            <TextBlock Grid.Column="3" Style="{StaticResource StylePrevision_2}" Name="TB_Temp_maximum_4"  Text="Temp max" Foreground="Black"/>
+            <Image Grid.Column="3" Style="{StaticResource StyleImage_1}" Name="IMG_Icone_4"/>
+        </Grid>
+        
+    </Grid>
+</Window>
